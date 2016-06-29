@@ -166,7 +166,7 @@ public abstract class RoutingResource {
     
     /** The set of modes that a user is willing to use, with qualifiers stating whether vehicles should be parked, rented, etc. */
     @QueryParam("mode")
-    protected QualifiedModeSet modes;
+    public QualifiedModeSet modes;
 
     /** The minimum time, in seconds, between successive trips on different vehicles.
      *  This is designed to allow for imperfect schedule adherence.  This is a minimum;
@@ -356,7 +356,7 @@ public abstract class RoutingResource {
      * vertices and timezones here right away, but just ignore them in semantic equality checks.
      */
     @Context
-    protected OTPServer otpServer;
+    public OTPServer otpServer;
 
     /**
      * Range/sanity check the query parameter fields and build a Request object from them.
